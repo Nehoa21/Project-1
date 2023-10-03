@@ -1,0 +1,13 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #e5dae8;
+
+}
+
+.btn {
+    background-color: #283593;
+}
+
+.btn:hover {
+    background-color: #7d8bf5;
+}
