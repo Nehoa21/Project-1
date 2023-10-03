@@ -1,9 +1,14 @@
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #e5dae8;
-
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 .btn {
     background-color: #283593;
 }
