@@ -18,15 +18,19 @@
     <main class="main">
         <form>
             <input id="city-name" type="text" placeholder="seacrh">
-            <div class="dropdown">
-                <button class="dropbtn" id="dropdown-btn">Dropdown</button>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
+            <div class="dropdown center-align">
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Attraction Type</a>
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!">Hikes</a></li>
+                    <li><a href="#!">Museums</a></li>
+                    <li><a href="#!">National Parks</a></li>
+                    <li><a href="#!">Parks</a></li>
+                    <li><a href="#!">Restaurants</a></li>
+                    <li><a href="#!">Sports Arenas</a></li>
+                    <li><a href="#!">Theme Parks</a></li>  
+                </ul>    
               </div> 
-              <button class="btn" id="submit-btn" type="submit">submit</button>
+            <button class="btn" id="submit-btn" type="submit">submit</button>
         </form>
     </main>
     <footer>
