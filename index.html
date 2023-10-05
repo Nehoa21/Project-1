@@ -2,33 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets\style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Attraction Locator</title>
 </head>
 <body>
     <header>
-        <h1>title</h1>
+        <h1 class="center-align indigo darken-3 white-text">Attraction Locator</h1>
     </header>
     <section id="main-image">
-
     </section>
     <main class="main">
         <form>
             <input id="city-name" type="text" placeholder="seacrh">
-            <div class="dropdown">
-                <button class="dropbtn" id="dropdown-btn">Dropdown</button>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div> 
-              <button class="btn" id="submit-btn" type="submit">submit</button>
+            <div class="dropdown center-align">
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Attraction Type</a>
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!">Hikes</a></li>
+                    <li><a href="#!">Museums</a></li>
+                    <li><a href="#!">National Parks</a></li>
+                    <li><a href="#!">Parks</a></li>
+                    <li><a href="#!">Restaurants</a></li>
+                    <li><a href="#!">Sports Arenas</a></li>
+                    <li><a href="#!">Theme Parks</a></li>  
+                </ul>    
+            </div> 
+            <div class="submit-button center-align">
+                <button class="btn" id="submit-btn" type="submit">submit</button>
+            </div>    
         </form>
     </main>
     <footer>
         <p>footer</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/script.js"></script>
 </body>
 </html>
