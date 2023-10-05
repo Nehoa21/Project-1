@@ -1,6 +1,6 @@
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #e5dae8;
+    background: #edf0fa;
 }
 
 body, html {
@@ -10,10 +10,10 @@ body, html {
 .container {
     position: relative;
     text-align: center;
-    color: white;
+    color: #edf0fa;
   }
 
-  .centered {
+.centered {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,6 +22,10 @@ body, html {
     background: rgba(0, 0, 0, 0);
   }
   
+
+footer {
+    text-align: center;
+}
 
 .btn {
     background-color: #283593;
