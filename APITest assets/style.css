@@ -2,17 +2,13 @@
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
- #map {
-  height: 50%;
-  margin-left: 632px;
-}
 
-/* .map-container {
+.map-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-} */
+}
 
 /* 
  * Optional: Makes the sample page fill the window. 
@@ -48,8 +44,12 @@ table {
 }
 
 #map {
-  margin-top: 40px;
-  width: 440px;
+  /* margin-top: 40px;
+  width: 440px; */
+  display: flex;
+  padding: 5px;
+  height: 500px;
+  width: 500px;
 }
 
 #listing {
