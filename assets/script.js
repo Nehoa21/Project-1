@@ -18,10 +18,10 @@ var wind = document.getElementById("wind");
 
 //ATRACTION TYPE DROPDOWN
 // 2-List with attraction options
-var dropdowns = document.querySelectorAll('.dropdown-trigger')
-for (var i = 0; i < dropdowns.length; i++){
-    M.Dropdown.init(dropdowns[i]);
-}
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
 
 // BUTTON SUBMIT
 //3- Hit to get the results in the index2.hmtl

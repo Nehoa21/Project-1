@@ -17,25 +17,14 @@
     <section id="main-image">
     </section>
     <main class="main">
-        <form>
-            <input id="city-name" type="text" placeholder="seacrh">
-            <div class="dropdown center-align">
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Attraction Type</a>
-                <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="#!">Hikes</a></li>
-                    <li><a href="#!">Museums</a></li>
-                    <li><a href="#!">National Parks</a></li>
-                    <li><a href="#!">Parks</a></li>
-                    <li><a href="#!">Restaurants</a></li>
-                    <li><a href="#!">Sports Arenas</a></li>
-                    <li><a href="#!">Theme Parks</a></li>  
-                </ul>    
-            </div> 
-            <div class="submit-button center-align">
-                <button class="btn" id="submit-btn" type="submit">submit</button>
-            </div>    
-        </form>
-
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>   
         <div class="col s6" id="current-weather">
             <h6>Current weather</h6>
             <p id="temp"><i class="material-icons left">device_thermostat</i></p>
