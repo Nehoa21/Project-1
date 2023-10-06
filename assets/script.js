@@ -18,6 +18,7 @@ var wind = document.getElementById("wind");
 
 //ATRACTION TYPE DROPDOWN
 // 2-List with attraction options
+let options;
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems, options);
