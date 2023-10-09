@@ -7,7 +7,7 @@ body, html {
     height: 100%;
 }
 
-.container {
+.pic-container {
     position: relative;
     text-align: center;
     color: #edf0fa;

@@ -5,7 +5,7 @@
 
 .map-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -37,7 +37,7 @@ table {
   display: -ms-flexbox;
   display: flex;
   left: 0;
-  position: absolute;
+  
   top: 0;
   width: 440px;
   z-index: 1;
@@ -53,7 +53,6 @@ table {
 }
 
 #listing {
-  position: absolute;
   width: 200px;
   height: 470px;
   overflow: auto;
