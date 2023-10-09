@@ -294,10 +294,7 @@ function buildIWContent(place) {
   }
 }
 
-
-
-
-// Global variables
+// Weather API and modal functions
 
 var weatherApiKey = "aca54910fb4838e78fe21b03858e5b41";
 var mainImage = document.getElementById("main-image");
@@ -309,28 +306,15 @@ var temp = document.getElementById("temp");
 var weather = document.getElementById("weather");
 var wind = document.getElementById("wind");
 
+// Modal button
 
-// LOCATION SEARCH: 
-//1- input when we write the city names 
+let options;
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems, options);
+});
 
-
-
-//ATRACTION TYPE DROPDOWN
-// 2-List with attraction options
-
-// let options;
-// document.addEventListener('DOMContentLoaded', function() {
-//     var elems = document.querySelectorAll('.modal');
-//     var instances = M.Modal.init(elems, options);
-//   });
-
-// BUTTON SUBMIT
-//3- Hit to get the results in the index2.hmtl
-
-// submitButton.addEventListener('click',currentWeather);
-
-
-// CURRENT WEATHER API
+// Weather API function
 
 function currentWeather(){
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+cityName.value+'&appid=aca54910fb4838e78fe21b03858e5b41')
@@ -348,9 +332,5 @@ function currentWeather(){
 
 .catch(err => alert("Wrong city name"));    
 }
-
-
-
-// RESULTS
 
 window.initMap = initMap;

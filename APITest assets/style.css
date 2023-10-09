@@ -37,9 +37,8 @@ table {
   display: -ms-flexbox;
   display: flex;
   left: 0;
-  
   top: 0;
-  width: 440px;
+  width: 474px;
   z-index: 1;
 }
 
