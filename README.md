@@ -1,16 +1,12 @@
 # Tourist Attraction Locator
 
 ## Description 
-We created this project to help people, or tourists search for activities, must see locations, along with recommended places to get food and treats
+We created this project to help people, or tourists, search for activities, must see locations, along with recommended places to get food and treats, as well as check the local weather.
 
 ## Table of Contents
-- [Installation](#installation)
 - [Usage](#usage)
 - [Tools](#tools)
 - [Credits](#credits)
-
-## Installation
-Steps required to install your project. Provide a step-by-step Description of how to get the Tourist attraction locator
 
 ## Usage 
 Give examples for use. Include screenshots as needed.
@@ -22,7 +18,9 @@ to add a screenshot, create an `assets/images` folder in your repository and upl
     ```
 
  ## Tools
-  List of tools used to complete the project. 
+ - Materialize CSS
+ - Google Maps API - Place Autocomplete Hotel Search
+ - Open Weather API
 
   
 ## Credits
