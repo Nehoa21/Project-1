@@ -2,13 +2,13 @@
 
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #edf0fa;
+    /* background: #edf0fa; */
 }
 
-/* body,
+body,
 html {
     height: 100%;
-} */
+}
 
 .pic-container {
     position: relative;
@@ -54,9 +54,9 @@ footer {
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
-/* #map {
+#map {
     height: 100%;
-} */
+}
 
 .map-container {
     display: flex;
@@ -74,7 +74,6 @@ body {
     margin: 0;
     padding: 0;
     padding: 0 !important;
-
 }
 
 table {
@@ -89,23 +88,21 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    left: 0;
-    top: 0;
+    justify-content: space-around;
     width: 474px;
     z-index: 1;
 }
 
 #map {
-    margin-top: 40px;
-    /* width: 440px; */
+    margin-top: 20px;
     display: flex;
     padding: 5px;
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 800px;
 }
 
 #listing {
-    width: 200px;
+    /* width: 200px; */
     height: 470px;
     overflow: auto;
     left: 442px;
@@ -121,8 +118,9 @@ table {
 #locationField {
     -webkit-box-flex: 1 1 190px;
     -ms-flex: 1 1 190px;
-    flex: 1 1 190px;
+    flex: 1 0 190px;
     margin: 0 8px;
+    width: 250px;
 }
 
 #controls {

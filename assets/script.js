@@ -61,7 +61,7 @@ const countries = {
   },
   us: {
     center: { lat: 37.1, lng: -95.7 },
-    zoom: 3,
+    zoom: 4,
   },
   uk: {
     center: { lat: 54.8, lng: -4.6 },
@@ -106,12 +106,11 @@ function onPlaceChanged() {
 
   if (place.geometry && place.geometry.location) {
     map.panTo(place.geometry.location);
-    map.setZoom(15);
+    map.setZoom(13);
     search();
   } else {
     document.getElementById("autocomplete").placeholder = "Enter a city";
   }
-
   currentWeather();
 }
 
@@ -297,11 +296,6 @@ function buildIWContent(place) {
 // Weather API and modal functions
 
 var weatherApiKey = "aca54910fb4838e78fe21b03858e5b41";
-var mainImage = document.getElementById("main-image");
-var cityName = document.getElementById("city-name");
-var dropDownButton = document.getElementById("dropdown-btn")
-var submitButton = document.getElementById("submit-btn");
-
 var temp = document.getElementById("temp");
 var weather = document.getElementById("weather");
 var wind = document.getElementById("wind");
@@ -317,20 +311,26 @@ document.addEventListener('DOMContentLoaded', function() {
 // Weather API function
 
 function currentWeather(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+cityName.value+'&appid=aca54910fb4838e78fe21b03858e5b41')
+  var selectedCityName = document.getElementById("autocomplete").value;
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+selectedCityName+'&appid='+weatherApiKey)
     .then(response => response.json())
     .then(data => {
         var tempValue = data['main']['temp']; //Temp from API
-        var weatherValue = data['main']; // weather from API
+        var weatherValue = data['weather']['0']['description']; // weather from API
         var windValue = data['wind']['speed']; //wind from API
 
-        temp.innerHTML = tempValue;
-        weather.innerHTML = weatherValue;
-        wind.innerHTML = windValue;
+        temp.innerHTML = "Temp: " + toFahrenheit(tempValue) + "°F";
+        weather.innerHTML = "Weather: " + weatherValue;
+        wind.innerHTML = "Wind: " + windValue + " MPH";
         console.log(data);
     })
 
-.catch(err => alert("Wrong city name"));    
+// .catch(err => alert("Wrong city name"));
+}
+
+function toFahrenheit (tempValue) {
+  var fahrenheit = Math.trunc((tempValue-273)*(9/5)+32);
+  return fahrenheit;
 }
 
 window.initMap = initMap;
