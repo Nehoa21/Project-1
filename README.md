@@ -8,7 +8,6 @@ We created this project to help people, or tourists, search for activities, must
 - [Tools](#tools)
 - [Credits](#credits)
 
-
 ## Usage 
 Give examples for use. Include screenshots as needed.
 
@@ -22,6 +21,7 @@ to add a screenshot, create an `assets/images` folder in your repository and upl
  - Materialize CSS
  - Google Maps API - Place Autocomplete Hotel Search
  - Open Weather API
+
   
 ## Credits
 - Nehoa Akina

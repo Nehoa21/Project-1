@@ -1,41 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="assets\style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attraction Locator</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="assets\style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attraction Locator</title>
 </head>
+
+<header>
+  <div class="pic-container">
+    <img src="assets\images\skyscraper.jpg" alt="skyscraper" style="width:100%;">
+    <div class="centered">Attraction Locator</div>
+    <p class="info black-text">Find tourist attractions and check local weather conditions near your location anywhere
+      in the US</p>
+  </div>
+  <section id="main-image"></section>
+</header>
+
 <body>
-    <div class="container">
-        <img src="assets\images\skyscraper.jpg" alt="skyscraper" style="width:100%;">
-        <div class="centered">Attraction Locator</div>
-        <p class="info black-text">Find tourist attractions and check local weather conditions near your location anywhere in the US</p>
-    </div>    
-    <section id="main-image">
-    </section>
-    <main class="main">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Click Here To Begin Search</a>
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-          </div>
-        </div>   
-        <div class="col s6" id="current-weather">
-            <h6>Current weather</h6>
-            <p id="temp"><i class="material-icons left">device_thermostat</i></p>
-            <p id="weather"><i class="material-icons left">wb_sunny</i></p>
-            <p id="wind"><i class="material-icons left">airwave</i></p>
+  <main class="main">
+
+    <!-- modal -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Click Here To Begin Search</a>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h3>the</h3>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
-    </main>
-    <footer class="footer black-text">
-        <p><i class="material-icons">flight</i>Safe Travels<i class="material-icons">flight</i></p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/script.js"></script>
+      </div>
+    </div>
+
+    <!-- location search bar -->
+    <section class="hotel-search">
+      <div>
+        <div id="findhotels">Find attractions in:</div>
+        <div id="locationField">
+          <input id="autocomplete" placeholder="Enter a city" type="text" />
+        </div>
+    
+        <!-- country dropdown -->
+        <div id="controls">
+          <select id="country">
+            <option value="all">All</option>
+            <option value="au">Australia</option>
+            <option value="br">Brazil</option>
+            <option value="ca">Canada</option>
+            <option value="fr">France</option>
+            <option value="de">Germany</option>
+            <option value="mx">Mexico</option>
+            <option value="nz">New Zealand</option>
+            <option value="it">Italy</option>
+            <option value="za">South Africa</option>
+            <option value="es">Spain</option>
+            <option value="pt">Portugal</option>
+            <option value="us" selected>U.S.A.</option>
+            <option value="uk">United Kingdom</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- weather api -->
+    <section class="col s6" id="current-weather">
+      <div>
+        <h4>Current Weather</h4>
+        <p id="temp"><i class="material-icons left">device_thermostat</i></p>
+        <p id="weather"><i class="material-icons left">wb_sunny</i></p>
+        <p id="wind"><i class="material-icons left">airwave</i></p>
+      </div>
+    </section>
+
+    <!-- google map -->
+    <section class="map-container">
+      <div id="listing">
+        <table id="resultsTable">
+          <tbody id="results"></tbody>
+        </table>
+      </div>
+      <div id="map"></div>
+    </section>
+
+    <!-- nearby location results -->
+    <div style="display: none">
+      <div id="info-content">
+        <table>
+          <tr id="iw-url-row" class="iw_table_row">
+            <td id="iw-icon" class="iw_table_icon"></td>
+            <td id="iw-url"></td>
+          </tr>
+          <tr id="iw-address-row" class="iw_table_row">
+            <td class="iw_attribute_name">Address:</td>
+            <td id="iw-address"></td>
+          </tr>
+          <tr id="iw-phone-row" class="iw_table_row">
+            <td class="iw_attribute_name">Telephone:</td>
+            <td id="iw-phone"></td>
+          </tr>
+          <tr id="iw-rating-row" class="iw_table_row">
+            <td class="iw_attribute_name">Rating:</td>
+            <td id="iw-rating"></td>
+          </tr>
+          <tr id="iw-website-row" class="iw_table_row">
+            <td class="iw_attribute_name">Website:</td>
+            <td id="iw-website"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer black-text">
+    <p><i class="material-icons">flight</i>Safe Travels<i class="material-icons">flight</i></p>
+  </footer>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYCFhmB03AXjuqWMChzaaiQ4JAXmkOw4Q&callback=initMap&libraries=places&v=weekly"
+    defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets/script.js"></script>
 </body>
+
 </html>
