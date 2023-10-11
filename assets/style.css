@@ -23,10 +23,17 @@ html {
     transform: translate(-50%, -50%);
     font-size: 50px;
     background: rgba(0, 0, 0, 0);
+    color: khaki;
+    font-weight: bold;
+}
+
+.info {
+    font-size: 18px;
 }
 
 footer {
     text-align: center;
+    font-size: x-large;
 }
 
 .btn {
@@ -40,12 +47,12 @@ footer {
 /* Weather API CSS */
 
 #current-weather {
-    display: flex;
-    justify-content: center;
+    display: none;
 }
 
-#current-weather p {
-    display: flex;
+.material-icons {
+    width: 24px;
+    height: 24px;
 }
 
 /* Google Maps API CSS */
@@ -112,7 +119,8 @@ table {
 }
 
 #findhotels {
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #locationField {

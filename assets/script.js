@@ -10,6 +10,7 @@ let places;
 let infoWindow;
 let markers = [];
 let autocomplete;
+let cityNameStorage = [];
 const countryRestrict = { country: "us" };
 const MARKER_PATH =
   "https://developers.google.com/maps/documentation/javascript/images/marker_green";
@@ -112,6 +113,20 @@ function onPlaceChanged() {
     document.getElementById("autocomplete").placeholder = "Enter a city";
   }
   currentWeather();
+  setLocalStorage();
+}
+
+// save cities searched in local storage
+function setLocalStorage(){
+  var userInput = {
+    city: selectedCityName.value,
+  }
+  console.log(userInput)
+
+  cityNameStorage.push(userInput);
+  console.log(cityNameStorage)
+
+  localStorage.setItem("autocomplete", JSON.stringify(userInput));
 }
 
 // Search for hotels in the selected city, within the viewport of the map.
@@ -299,6 +314,8 @@ var weatherApiKey = "aca54910fb4838e78fe21b03858e5b41";
 var temp = document.getElementById("temp");
 var weather = document.getElementById("weather");
 var wind = document.getElementById("wind");
+var weatherForecast = document.getElementById('current-weather');
+var selectedCityName = document.getElementById("autocomplete");
 
 // Modal button
 
@@ -311,19 +328,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // Weather API function
 
 function currentWeather(){
-  var selectedCityName = document.getElementById("autocomplete").value;
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+selectedCityName+'&appid='+weatherApiKey)
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+selectedCityName.value+'&appid='+weatherApiKey)
     .then(response => response.json())
     .then(data => {
         var tempValue = data['main']['temp']; //Temp from API
         var weatherValue = data['weather']['0']['description']; // weather from API
         var windValue = data['wind']['speed']; //wind from API
 
+        weatherForecast.style.display = 'flex';
+        weatherForecast.style.justifyContent = 'center';
         temp.innerHTML = "Temp: " + toFahrenheit(tempValue) + "°F";
         weather.innerHTML = "Weather: " + weatherValue;
         wind.innerHTML = "Wind: " + windValue + " MPH";
         console.log(data);
     })
+    
 
 // .catch(err => alert("Wrong city name"));
 }
