@@ -1,7 +1,7 @@
 # Tourist Attraction Locator
 
 ## Description 
-We created this project to help people, or tourists, search for activities, must see locations, along with recommended places to get food and treats, as well as check the local weather.
+We created this project to help people, or tourists, search for must see locations as well as check the local weather.
 
 ## Table of Contents
 - [Usage](#usage)
