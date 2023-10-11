@@ -9,13 +9,9 @@ We created this project to help people, or tourists, search for activities, must
 - [Credits](#credits)
 
 ## Usage 
-Give examples for use. Include screenshots as needed.
 
-to add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![Screenshot 2023-10-11 172427](https://github.com/Nehoa21/Tourist-Attraction-Locator/assets/141890946/3c5863ac-df43-44ea-b2ff-b888991345a8)
+![Screenshot 2023-10-11 172442](https://github.com/Nehoa21/Tourist-Attraction-Locator/assets/141890946/2021b417-b1a2-441a-b1d5-92623a87e614)
 
  ## Tools
  - Materialize CSS
