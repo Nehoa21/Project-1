@@ -24,3 +24,7 @@ We created this project to help people, or tourists, search for must see locatio
 - Alyssa Faerber
 - Andres Mejia
 - Jayce Thompson
+
+## Links
+- https://nehoa21.github.io/Tourist-Attraction-Locator/
+- https://github.com/Nehoa21/Tourist-Attraction-Locator
